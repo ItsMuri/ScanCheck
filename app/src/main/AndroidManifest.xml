@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jasmi_000.scancheck">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Start"
+            android:label="@string/title_activity_start"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".Start">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jasmi_000.scancheck.Start" />
+        </activity>
+        <activity
+            android:name=".RegistrierenActivity"
+            android:label="@string/title_activity_registrieren"
+            android:parentActivityName=".Start">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jasmi_000.scancheck.Start" />
+        </activity>
+        <activity
+            android:name=".ScanCheck"
+            android:label="@string/title_activity_scan_check"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Scan_QR_Activity"
+            android:label="@string/title_activity_scan__qr_"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jasmi_000.scancheck.LoginActivity" />
+        </activity>
+    </application>
+
+</manifest>
